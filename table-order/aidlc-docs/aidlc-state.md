@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-05-06T00:00:00Z
-- **Current Stage**: INCEPTION - Requirements Analysis
+- **Current Stage**: CONSTRUCTION - Functional Design (Unit 1)
 
 ## Workspace State
 - **Existing Code**: No
@@ -23,14 +23,14 @@
 
 ## Stage Progress
 - [x] INCEPTION - Workspace Detection (Greenfield detected)
-- [ ] INCEPTION - Requirements Analysis
-- [ ] INCEPTION - User Stories
-- [ ] INCEPTION - Workflow Planning
-- [ ] INCEPTION - Application Design
-- [ ] INCEPTION - Units Generation
-- [ ] CONSTRUCTION - Functional Design
-- [ ] CONSTRUCTION - NFR Requirements
-- [ ] CONSTRUCTION - NFR Design
-- [ ] CONSTRUCTION - Infrastructure Design
-- [ ] CONSTRUCTION - Code Generation
-- [ ] CONSTRUCTION - Build and Test
+- [x] INCEPTION - Requirements Analysis (Approved)
+- [x] INCEPTION - User Stories (Approved)
+- [x] INCEPTION - Workflow Planning (Approved)
+- [x] INCEPTION - Application Design (Approved)
+- [x] INCEPTION - Units Generation (Approved)
+- [ ] CONSTRUCTION - Functional Design (EXECUTE, per-unit)
+- [ ] CONSTRUCTION - NFR Requirements (EXECUTE, per-unit)
+- [ ] CONSTRUCTION - NFR Design (SKIP - 소규모 운영, 보안 확장 미적용)
+- [ ] CONSTRUCTION - Infrastructure Design (EXECUTE, per-unit)
+- [ ] CONSTRUCTION - Code Generation (EXECUTE, per-unit)
+- [ ] CONSTRUCTION - Build and Test (EXECUTE)
