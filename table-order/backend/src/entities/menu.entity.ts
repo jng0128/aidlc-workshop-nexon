@@ -22,10 +22,10 @@ export class Menu {
   @Column({ type: 'integer', nullable: false })
   price: number;
 
-  @Column({ nullable: true })
+  @Column({ type: 'text', nullable: true })
   description: string | null;
 
-  @Column({ name: 'image_url', nullable: true })
+  @Column({ name: 'image_url', type: 'text', nullable: true })
   imageUrl: string | null;
 
   @Index()

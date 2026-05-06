@@ -21,27 +21,21 @@ export function useSse() {
         setConnected(true);
       };
 
-      eventSource.onmessage = (event) => {
+      const handleEvent = (event: MessageEvent) => {
         try {
           const data = JSON.parse(event.data);
           setLastEvent(data);
-
-          switch (data.type) {
-            case 'order:created':
-            case 'order:statusChanged':
-            case 'order:deleted':
-            case 'session:completed':
-              queryClient.invalidateQueries({ queryKey: ['orders'] });
-              queryClient.invalidateQueries({ queryKey: ['tables'] });
-              break;
-            case 'ping':
-              // heartbeat, no action needed
-              break;
-          }
+          queryClient.invalidateQueries({ queryKey: ['orders'] });
+          queryClient.invalidateQueries({ queryKey: ['tables'] });
         } catch {
           // ignore parse errors
         }
       };
+
+      eventSource.addEventListener('order:created', handleEvent);
+      eventSource.addEventListener('order:statusChanged', handleEvent);
+      eventSource.addEventListener('order:deleted', handleEvent);
+      eventSource.addEventListener('session:completed', handleEvent);
 
       eventSource.onerror = () => {
         setConnected(false);
