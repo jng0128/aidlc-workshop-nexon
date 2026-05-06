@@ -4,6 +4,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CommonModule } from './common/common.module';
 import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
+import { CategoryModule } from './category/category.module';
+import { MenuModule } from './menu/menu.module';
+import { OrderModule } from './order/order.module';
+import { SessionModule } from './session/session.module';
+import { TableModule } from './table/table.module';
+import { StoreModule } from './store/store.module';
+import { SseModule } from './sse/sse.module';
 
 @Module({
   imports: [
@@ -38,6 +45,13 @@ import { AuthModule } from './auth/auth.module';
 
     // Feature modules
     AuthModule,
+    CategoryModule,
+    MenuModule,
+    OrderModule,
+    SessionModule,
+    TableModule,
+    StoreModule,
+    SseModule,
   ],
   controllers: [],
   providers: [],

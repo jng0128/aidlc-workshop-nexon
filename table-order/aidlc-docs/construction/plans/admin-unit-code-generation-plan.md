@@ -40,51 +40,51 @@ table-order/
 - [ ] 단위 테스트 (AuthService)
 
 ### Step 4: 백엔드 - CategoryModule
-- [ ] Category Controller, Service, Module
-- [ ] CRUD 엔드포인트
-- [ ] 중복 검증, Delete Protection
-- [ ] Reorder 기능
-- [ ] 단위 테스트 (CategoryService)
+- [x] Category Controller, Service, Module
+- [x] CRUD 엔드포인트
+- [x] 중복 검증, Delete Protection
+- [x] Reorder 기능
+- [x] 단위 테스트 (CategoryService)
 
 ### Step 5: 백엔드 - MenuModule
-- [ ] Menu Controller, Service, Module
-- [ ] CRUD 엔드포인트
-- [ ] 카테고리 존재 검증, 가격 범위 검증
-- [ ] Reorder 기능
-- [ ] 단위 테스트 (MenuService)
+- [x] Menu Controller, Service, Module
+- [x] CRUD 엔드포인트
+- [x] 카테고리 존재 검증, 가격 범위 검증
+- [x] Reorder 기능
+- [x] 단위 테스트 (MenuService)
 
 ### Step 6: 백엔드 - OrderModule
-- [ ] Order Controller, Service, Module
-- [ ] 주문 생성 (번호 생성, 금액 계산, 세션 연동)
-- [ ] 상태 변경 (전이 규칙 검증)
-- [ ] 주문 삭제
-- [ ] 주문 조회 (세션별, 테이블별)
-- [ ] 단위 테스트 (OrderService)
+- [x] Order Controller, Service, Module
+- [x] 주문 생성 (번호 생성, 금액 계산, 세션 연동)
+- [x] 상태 변경 (전이 규칙 검증)
+- [x] 주문 삭제
+- [x] 주문 조회 (세션별, 테이블별)
+- [x] 단위 테스트 (OrderService)
 
 ### Step 7: 백엔드 - SessionModule
-- [ ] Session Controller, Service, Module
-- [ ] getOrCreateSession
-- [ ] 이용 완료 처리 (트랜잭션: 이력 이동 + 삭제 + 세션 종료)
-- [ ] 과거 이력 조회 (날짜 필터)
-- [ ] 단위 테스트 (SessionService)
+- [x] Session Controller, Service, Module
+- [x] getOrCreateSession
+- [x] 이용 완료 처리 (트랜잭션: 이력 이동 + 삭제 + 세션 종료)
+- [x] 과거 이력 조회 (날짜 필터)
+- [x] 단위 테스트 (SessionService)
 
 ### Step 8: 백엔드 - TableModule + StoreModule
-- [ ] Table Controller, Service, Module
-- [ ] Store Module (시드 데이터용)
-- [ ] 테이블 CRUD
-- [ ] 단위 테스트
+- [x] Table Controller, Service, Module
+- [x] Store Module (시드 데이터용)
+- [x] 테이블 CRUD
+- [x] 단위 테스트
 
 ### Step 9: 백엔드 - SseModule
-- [ ] SSE Controller, Service, Module
-- [ ] 클라이언트 연결 관리
-- [ ] 이벤트 발행 (order:created, order:statusChanged, order:deleted, session:completed)
-- [ ] 하트비트 (30초 ping)
-- [ ] OrderModule/SessionModule에서 SSE 연동
+- [x] SSE Controller, Service, Module
+- [x] 클라이언트 연결 관리
+- [x] 이벤트 발행 (order:created, order:statusChanged, order:deleted, session:completed)
+- [x] 하트비트 (30초 ping)
+- [x] OrderModule/SessionModule에서 SSE 연동
 
 ### Step 10: 백엔드 - 마이그레이션 및 시드
-- [ ] TypeORM 마이그레이션 파일 생성
-- [ ] 시드 스크립트 (초기 Store + Admin 계정)
-- [ ] Dockerfile (multi-stage)
+- [x] TypeORM 마이그레이션 파일 생성
+- [x] 시드 스크립트 (초기 Store + Admin 계정)
+- [x] Dockerfile (multi-stage)
 
 ### Step 11: 관리자 프론트엔드 - 프로젝트 셋업 및 공통
 - [ ] Vite + React + TypeScript 설정
