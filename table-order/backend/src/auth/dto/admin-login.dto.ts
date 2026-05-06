@@ -1,0 +1,16 @@
+import { IsString, IsNotEmpty, MinLength } from 'class-validator';
+
+export class AdminLoginDto {
+  @IsString()
+  @IsNotEmpty()
+  storeIdentifier: string;
+
+  @IsString()
+  @IsNotEmpty()
+  username: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @MinLength(4)
+  password: string;
+}

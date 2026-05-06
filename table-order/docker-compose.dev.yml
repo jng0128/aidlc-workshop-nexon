@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  postgres:
+    ports:
+      - '5432:5432'
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: table-order-backend-dev
+    environment:
+      - NODE_ENV=development
+      - PORT=4000
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USERNAME=${DB_USERNAME:-postgres}
+      - DB_PASSWORD=${DB_PASSWORD:-postgres}
+      - DB_DATABASE=${DB_DATABASE:-table_order}
+      - JWT_SECRET=${JWT_SECRET:-dev-secret-key}
+      - JWT_EXPIRES_IN=${JWT_EXPIRES_IN:-7d}
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend/test:/app/test
+      - /app/node_modules
+    ports:
+      - '4000:4000'
+      - '9229:9229'
+    command: npm run start:debug
+
+  admin-app:
+    build:
+      context: ./admin-app
+      dockerfile: Dockerfile.dev
+    container_name: table-order-admin-dev
+    environment:
+      - VITE_API_URL=http://localhost:4000
+    volumes:
+      - ./admin-app/src:/app/src
+      - ./admin-app/public:/app/public
+      - /app/node_modules
+    ports:
+      - '3001:3001'
+    command: npm run dev -- --host 0.0.0.0
+
+  customer-app:
+    build:
+      context: ./customer-app
+      dockerfile: Dockerfile.dev
+    container_name: table-order-customer-dev
+    environment:
+      - VITE_API_URL=http://localhost:4000
+    volumes:
+      - ./customer-app/src:/app/src
+      - ./customer-app/public:/app/public
+      - /app/node_modules
+    ports:
+      - '3000:3000'
+    command: npm run dev -- --host 0.0.0.0

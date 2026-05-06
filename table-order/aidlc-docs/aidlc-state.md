@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-05-06T00:00:00Z
-- **Current Stage**: CONSTRUCTION - Functional Design (Unit 1)
+- **Current Stage**: CONSTRUCTION - Code Generation (Unit 1)
 
 ## Workspace State
 - **Existing Code**: No
@@ -28,9 +28,9 @@
 - [x] INCEPTION - Workflow Planning (Approved)
 - [x] INCEPTION - Application Design (Approved)
 - [x] INCEPTION - Units Generation (Approved)
-- [ ] CONSTRUCTION - Functional Design (EXECUTE, per-unit)
-- [ ] CONSTRUCTION - NFR Requirements (EXECUTE, per-unit)
+- [ ] CONSTRUCTION - Functional Design (EXECUTE, per-unit) [Unit 1 Complete]
+- [ ] CONSTRUCTION - NFR Requirements (EXECUTE, per-unit) [Unit 1 Complete]
 - [ ] CONSTRUCTION - NFR Design (SKIP - 소규모 운영, 보안 확장 미적용)
-- [ ] CONSTRUCTION - Infrastructure Design (EXECUTE, per-unit)
+- [ ] CONSTRUCTION - Infrastructure Design (EXECUTE, per-unit) [Unit 1 Complete]
 - [ ] CONSTRUCTION - Code Generation (EXECUTE, per-unit)
 - [ ] CONSTRUCTION - Build and Test (EXECUTE)
