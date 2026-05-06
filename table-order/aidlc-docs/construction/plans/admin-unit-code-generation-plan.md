@@ -87,52 +87,52 @@ table-order/
 - [x] Dockerfile (multi-stage)
 
 ### Step 11: 관리자 프론트엔드 - 프로젝트 셋업 및 공통
-- [ ] Vite + React + TypeScript 설정
-- [ ] Zustand 스토어 (authStore, sseStore)
-- [ ] Axios 인스턴스 (JWT 인터셉터)
-- [ ] TanStack Query 설정
-- [ ] React Router 설정
-- [ ] 공통 컴포넌트 (Layout, Sidebar, ConfirmModal)
+- [x] Vite + React + TypeScript 설정
+- [x] Zustand 스토어 (authStore, sseStore)
+- [x] Axios 인스턴스 (JWT 인터셉터)
+- [x] TanStack Query 설정
+- [x] React Router 설정
+- [x] 공통 컴포넌트 (Layout, Sidebar, ConfirmModal)
 
 ### Step 12: 관리자 프론트엔드 - LoginPage
-- [ ] 로그인 폼 (매장ID, 사용자명, 비밀번호)
-- [ ] 로그인 API 연동
-- [ ] 토큰 저장 및 리다이렉트
-- [ ] 에러 표시
+- [x] 로그인 폼 (매장ID, 사용자명, 비밀번호)
+- [x] 로그인 API 연동
+- [x] 토큰 저장 및 리다이렉트
+- [x] 에러 표시
 
 ### Step 13: 관리자 프론트엔드 - DashboardPage (주문 모니터링)
-- [ ] 테이블 그리드 레이아웃
-- [ ] TableCard 컴포넌트 (총액, 주문 미리보기, 신규 강조)
-- [ ] OrderDetailModal (상세 보기, 상태 변경, 삭제)
-- [ ] SSE 연결 및 실시간 업데이트
-- [ ] 테이블 필터링
+- [x] 테이블 그리드 레이아웃
+- [x] TableCard 컴포넌트 (총액, 주문 미리보기, 신규 강조)
+- [x] OrderDetailModal (상세 보기, 상태 변경, 삭제)
+- [x] SSE 연결 및 실시간 업데이트
+- [x] 테이블 필터링
 
 ### Step 14: 관리자 프론트엔드 - TableManagementPage
-- [ ] 테이블 목록
-- [ ] 테이블 추가 폼
-- [ ] 이용 완료 버튼 + 확인 팝업
-- [ ] 과거 내역 모달 (날짜 필터)
+- [x] 테이블 목록
+- [x] 테이블 추가 폼
+- [x] 이용 완료 버튼 + 확인 팝업
+- [x] 과거 내역 모달 (날짜 필터)
 
 ### Step 15: 관리자 프론트엔드 - MenuManagementPage + CategoryManagementPage
-- [ ] 카테고리 CRUD UI
-- [ ] 메뉴 CRUD UI (카테고리별 필터)
-- [ ] 순서 변경 UI
-- [ ] 폼 검증
+- [x] 카테고리 CRUD UI
+- [x] 메뉴 CRUD UI (카테고리별 필터)
+- [x] 순서 변경 UI
+- [x] 폼 검증
 
 ### Step 16: 관리자 프론트엔드 - Dockerfile + Nginx
-- [ ] admin-app/Dockerfile (multi-stage)
-- [ ] admin-app/nginx.conf (SPA + API/SSE 프록시)
+- [x] admin-app/Dockerfile (multi-stage)
+- [x] admin-app/nginx.conf (SPA + API/SSE 프록시)
 
 ### Step 17: 통합 및 배포 구성
-- [ ] docker-compose.yml 최종 구성
-- [ ] docker-compose.dev.yml
-- [ ] .env.example
-- [ ] .gitignore
-- [ ] README.md (설치/실행 가이드)
+- [x] docker-compose.yml 최종 구성
+- [x] docker-compose.dev.yml
+- [x] .env.example
+- [x] .gitignore
+- [x] README.md (설치/실행 가이드)
 
 ### Step 18: 코드 생성 요약 문서
-- [ ] `aidlc-docs/construction/admin-unit/code/code-summary.md` 생성
-- [ ] 생성된 파일 목록 및 구조 문서화
+- [x] `aidlc-docs/construction/admin-unit/code/code-summary.md` 생성
+- [x] 생성된 파일 목록 및 구조 문서화
 
 ---
 
