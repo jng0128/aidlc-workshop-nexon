@@ -9,6 +9,7 @@ import { TableSession } from '../entities/table-session.entity';
 import { Table } from '../entities/table.entity';
 import { OrderStatus } from '../common/enums/order-status.enum';
 import { SessionStatus } from '../common/enums/session-status.enum';
+import { SseService } from '../sse/sse.service';
 
 describe('OrderService', () => {
   let service: OrderService;
@@ -16,6 +17,7 @@ describe('OrderService', () => {
   let orderItemRepository: any;
   let sessionRepository: any;
   let tableRepository: any;
+  let sseService: any;
 
   beforeEach(async () => {
     orderRepository = {
@@ -42,6 +44,10 @@ describe('OrderService', () => {
       findOne: jest.fn(),
     };
 
+    sseService = {
+      emitEvent: jest.fn(),
+    };
+
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         OrderService,
@@ -49,6 +55,7 @@ describe('OrderService', () => {
         { provide: getRepositoryToken(OrderItem), useValue: orderItemRepository },
         { provide: getRepositoryToken(TableSession), useValue: sessionRepository },
         { provide: getRepositoryToken(Table), useValue: tableRepository },
+        { provide: SseService, useValue: sseService },
       ],
     }).compile();
 

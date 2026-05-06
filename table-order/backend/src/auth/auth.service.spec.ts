@@ -2,14 +2,14 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { JwtService } from '@nestjs/jwt';
 import { UnauthorizedException, ForbiddenException } from '@nestjs/common';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 
 import { AuthService } from './auth.service';
 import { Store } from '../entities/store.entity';
 import { Admin } from '../entities/admin.entity';
 import { Table } from '../entities/table.entity';
 
-jest.mock('bcrypt');
+jest.mock('bcryptjs');
 
 describe('AuthService', () => {
   let service: AuthService;
@@ -93,10 +93,10 @@ describe('AuthService', () => {
 
       expect(result.accessToken).toBe('mock-jwt-token');
       expect(result.admin).toBeDefined();
-      expect(result.admin.id).toBe(1);
-      expect(result.admin.username).toBe('admin1');
-      expect(result.admin.storeId).toBe(1);
-      expect(result.admin.storeName).toBe('테스트 매장');
+      expect(result.admin!.id).toBe(1);
+      expect(result.admin!.username).toBe('admin1');
+      expect(result.admin!.storeId).toBe(1);
+      expect(result.admin!.storeName).toBe('테스트 매장');
 
       // Verify login attempts reset
       expect(adminRepository.save).toHaveBeenCalledWith(
@@ -215,10 +215,10 @@ describe('AuthService', () => {
 
       expect(result.accessToken).toBe('mock-jwt-token');
       expect(result.table).toBeDefined();
-      expect(result.table.id).toBe(1);
-      expect(result.table.tableNumber).toBe(1);
-      expect(result.table.storeId).toBe(1);
-      expect(result.table.storeName).toBe('테스트 매장');
+      expect(result.table!.id).toBe(1);
+      expect(result.table!.tableNumber).toBe(1);
+      expect(result.table!.storeId).toBe(1);
+      expect(result.table!.storeName).toBe('테스트 매장');
 
       // Verify JWT payload
       expect(jwtService.sign).toHaveBeenCalledWith({
