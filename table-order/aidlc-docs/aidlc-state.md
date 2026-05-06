@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-05-06T00:00:00Z
-- **Current Stage**: CONSTRUCTION - Code Generation (Unit 2 - Customer)
+- **Current Stage**: CONSTRUCTION - Build and Test (Complete)
 
 ## Workspace State
 - **Existing Code**: No
@@ -32,5 +32,5 @@
 - [ ] CONSTRUCTION - NFR Requirements (EXECUTE, per-unit) [Unit 1 Complete]
 - [ ] CONSTRUCTION - NFR Design (SKIP - 소규모 운영, 보안 확장 미적용)
 - [ ] CONSTRUCTION - Infrastructure Design (EXECUTE, per-unit) [Unit 1 Complete]
-- [ ] CONSTRUCTION - Code Generation (EXECUTE, per-unit)
-- [ ] CONSTRUCTION - Build and Test (EXECUTE)
+- [x] CONSTRUCTION - Code Generation (EXECUTE, per-unit) [Unit 1 + Unit 2 Complete]
+- [x] CONSTRUCTION - Build and Test (EXECUTE)
