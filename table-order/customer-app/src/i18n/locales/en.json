@@ -1,0 +1,53 @@
+{
+  "menu": {
+    "title": "Menu",
+    "category": "Category",
+    "allCategories": "All",
+    "addToCart": "Add to Cart",
+    "price": "₩{{price}}",
+    "noMenus": "No menus available",
+    "noDescription": "No description"
+  },
+  "cart": {
+    "title": "Cart",
+    "quantity": "Qty",
+    "totalAmount": "Total",
+    "orderButton": "Place Order",
+    "clearButton": "Clear Cart",
+    "emptyCart": "Your cart is empty",
+    "itemCount": "{{count}} items"
+  },
+  "order": {
+    "confirmTitle": "Order Confirmation",
+    "confirmButton": "Confirm Order",
+    "successTitle": "Order Complete",
+    "successMessage": "Your order has been placed successfully",
+    "orderNumber": "Order Number",
+    "redirectMessage": "Redirecting to menu in {{seconds}} seconds",
+    "historyTitle": "Order History",
+    "noOrders": "No orders yet",
+    "orderTime": "Order Time",
+    "amount": "Amount",
+    "errorMessage": "Order failed. Please try again."
+  },
+  "status": {
+    "PENDING": "Pending",
+    "PREPARING": "Preparing",
+    "COMPLETED": "Completed",
+    "CANCELLED": "Cancelled"
+  },
+  "login": {
+    "title": "Table Setup",
+    "storeIdentifier": "Store Identifier",
+    "tableNumber": "Table Number",
+    "password": "Password",
+    "submit": "Login",
+    "error": "Login failed. Please check your information."
+  },
+  "nav": {
+    "menu": "Menu",
+    "cart": "Cart",
+    "orders": "Orders",
+    "language": "KO"
+  }
+}

@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-05-06T00:00:00Z
-- **Current Stage**: CONSTRUCTION - Code Generation (Unit 1)
+- **Current Stage**: CONSTRUCTION - Code Generation (Unit 2 - Customer)
 
 ## Workspace State
 - **Existing Code**: No

@@ -32,12 +32,12 @@ table-order/
 - [x] 엔티티 정의 (Store, Admin, Table, TableSession, Category, Menu, Order, OrderItem, OrderHistory)
 
 ### Step 3: 백엔드 - AuthModule
-- [ ] Auth Controller, Service, Module
-- [ ] JWT Strategy, Guard
-- [ ] Roles Guard (admin/table)
-- [ ] 로그인 시도 제한 로직
-- [ ] bcrypt 비밀번호 검증
-- [ ] 단위 테스트 (AuthService)
+- [x] Auth Controller, Service, Module
+- [x] JWT Strategy, Guard
+- [x] Roles Guard (admin/table)
+- [x] 로그인 시도 제한 로직
+- [x] bcrypt 비밀번호 검증
+- [x] 단위 테스트 (AuthService)
 
 ### Step 4: 백엔드 - CategoryModule
 - [x] Category Controller, Service, Module
