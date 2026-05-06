@@ -32,6 +32,7 @@ export class OrderController {
   @Get()
   @Roles(UserRole.ADMIN, UserRole.TABLE)
   findOrders(
+    @CurrentUser() user: any,
     @Query('sessionId') sessionId?: string,
     @Query('tableId') tableId?: string,
   ) {
@@ -40,6 +41,10 @@ export class OrderController {
     }
     if (tableId) {
       return this.orderService.findByTable(Number(tableId));
+    }
+    // Admin: return all active orders for the store
+    if (user.role === UserRole.ADMIN) {
+      return this.orderService.findByStore(user.storeId);
     }
     return [];
   }

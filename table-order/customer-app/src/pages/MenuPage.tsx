@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import apiClient from '../api/axios';
@@ -8,7 +8,14 @@ import { useCartStore } from '../stores/cartStore';
 function MenuPage() {
   const { t } = useTranslation();
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
+  const [addedMenuId, setAddedMenuId] = useState<number | null>(null);
   const addItem = useCartStore((state) => state.addItem);
+
+  const handleAddToCart = useCallback((menu: Menu) => {
+    addItem(menu);
+    setAddedMenuId(menu.id);
+    setTimeout(() => setAddedMenuId(null), 1200);
+  }, [addItem]);
 
   const { data: categories = [] } = useQuery<Category[]>({
     queryKey: ['categories'],
@@ -25,11 +32,9 @@ function MenuPage() {
       const res = await apiClient.get('/menus', { params });
       return res.data;
     },
+    staleTime: 0,
+    refetchOnWindowFocus: true,
   });
-
-  const handleAddToCart = (menu: Menu) => {
-    addItem(menu);
-  };
 
   const formatPrice = (price: number) => {
     return price.toLocaleString('ko-KR') + '원';
@@ -199,7 +204,7 @@ function MenuPage() {
                   style={{
                     width: '100%',
                     padding: '10px',
-                    backgroundColor: '#2563eb',
+                    backgroundColor: addedMenuId === menu.id ? '#16a34a' : '#2563eb',
                     color: '#fff',
                     border: 'none',
                     borderRadius: '8px',
@@ -207,9 +212,11 @@ function MenuPage() {
                     fontWeight: 500,
                     cursor: 'pointer',
                     minHeight: '44px',
+                    transition: 'background-color 0.3s ease, transform 0.15s ease',
+                    transform: addedMenuId === menu.id ? 'scale(0.95)' : 'scale(1)',
                   }}
                 >
-                  {t('menu.addToCart')}
+                  {addedMenuId === menu.id ? '✓ 담았어요' : t('menu.addToCart')}
                 </button>
               </div>
             </div>

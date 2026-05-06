@@ -73,6 +73,29 @@ export class OrderService {
     return savedOrder;
   }
 
+  async findByStore(storeId: number): Promise<Order[]> {
+    // Find all active sessions for this store
+    const activeSessions = await this.sessionRepository
+      .createQueryBuilder('session')
+      .innerJoin('session.table', 'table')
+      .where('table.storeId = :storeId', { storeId })
+      .andWhere('session.status = :status', { status: SessionStatus.ACTIVE })
+      .getMany();
+
+    if (activeSessions.length === 0) {
+      return [];
+    }
+
+    const sessionIds = activeSessions.map((s) => s.id);
+
+    return this.orderRepository
+      .createQueryBuilder('order')
+      .leftJoinAndSelect('order.items', 'items')
+      .where('order.sessionId IN (:...sessionIds)', { sessionIds })
+      .orderBy('order.createdAt', 'DESC')
+      .getMany();
+  }
+
   async findBySession(sessionId: number): Promise<Order[]> {
     return this.orderRepository.find({
       where: { sessionId },
